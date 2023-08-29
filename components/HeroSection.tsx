@@ -1,7 +1,7 @@
 export default function Hero() {
     return (
         <>
-            <canvas id="objectLogo"></canvas>
+            <canvas id="ieteObject"></canvas>
         </>
     );
 }
