@@ -74,3 +74,17 @@
     @apply bg-background text-foreground;
   }
 }
+
+
+/* Define custom scrollbar colors */
+body::-webkit-scrollbar {
+  width: 1px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb);
+}
+
+body::-webkit-scrollbar-track {
+  background-color: var(--scrollbar-track);
+}
