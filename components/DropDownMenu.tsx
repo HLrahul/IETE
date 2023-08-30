@@ -25,8 +25,17 @@ export function DropdownHamMenu() {
                 </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent className="w-56">
-                <DropdownMenuItem>GitHub</DropdownMenuItem>
-                <DropdownMenuItem>Support</DropdownMenuItem>
+                <DropdownMenuItem>Home</DropdownMenuItem>
+                <DropdownMenuItem>About</DropdownMenuItem>
+                <DropdownMenuItem>Commitee Executive</DropdownMenuItem>
+
+                <DropdownMenuSeparator />
+
+                <DropdownMenuItem>Events</DropdownMenuItem>
+                <DropdownMenuItem>Membership</DropdownMenuItem>
+
+                <DropdownMenuSeparator />
+
                 <DropdownMenuItem disabled>API</DropdownMenuItem>
             </DropdownMenuContent>
         </DropdownMenu>

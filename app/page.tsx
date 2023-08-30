@@ -1,5 +1,6 @@
-import Hero from "@/components/HeroSection";
 import Navbar from "@/components/Navbar";
+import Hero from "@/components/HeroSection";
+import Intro from "@/components/IntroSection";
 
 export default function Home() {
     return (
@@ -7,6 +8,8 @@ export default function Home() {
             <Navbar />
 
             <Hero />
+
+            <Intro />
         </>
     );
 }
