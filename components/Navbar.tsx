@@ -28,7 +28,7 @@ export default function Navbar() {
 
     return (
       <div className="flex justify-center items-center transition-all">
-        <Card className={`h-16 top-${top} w-[95%] z-50 fixed flex items-center justify-between transition-all`}>
+        <Card className={`h-16 top-5 w-[95%] z-50 fixed flex items-center justify-between transition-all`}>
           <CardHeader>
             <h1 className="font-bold text-2xl tracking-widest cursor-pointer">
               IETE
