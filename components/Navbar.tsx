@@ -7,39 +7,67 @@ import { DropdownHamMenu } from "./DropDownMenu";
 import ThemeMenuButton from "./ThemeButton";
 
 export default function Navbar() {
+  const [scrolledDown, setScrolledDown] = useState(false);
+  const [prevScrollY, setPrevScrollY] = useState(0);
+  const [prevScrollUp, setPrevScrollUp] = useState(0);
 
-    const [top, setTop] = useState(5);
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
 
-    useEffect(() => {
-      const handleScroll = () => {
-        const currentTop = window.scrollY;
-        if (currentTop > 0) {
-          setTop(-16);
-        } else {
-          setTop(5);
-        }
-      };
-      window.addEventListener("scroll", handleScroll);
+      if (currentScrollY > prevScrollY) {
+        setScrolledDown(true);
+      } else {
+        setScrolledDown(false);
+      }
 
-      return () => {
-        window.removeEventListener("scroll", handleScroll);
-      };
-    }, []);
+      setPrevScrollY(currentScrollY);
+    };
 
-    return (
-      <div className="flex justify-center items-center transition-all">
-        <Card className={`h-16 top-5 w-[95%] z-50 fixed flex items-center justify-between transition-all`}>
-          <CardHeader>
-            <h1 className="font-bold text-2xl tracking-widest cursor-pointer">
-              IETE
-            </h1>
-          </CardHeader>
+    window.addEventListener("scroll", handleScroll);
 
-          <CardContent className="gap-2 flex items-center justify-center">
-            <ThemeMenuButton />
-            <DropdownHamMenu />
-          </CardContent>
-        </Card>
-      </div>
-    );
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > prevScrollUp) {
+        setScrolledDown(false);
+      } else {
+        setScrolledDown(true);
+      }
+
+      setPrevScrollUp(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  return (
+    <div className="flex justify-center items-center transition-all">
+      <Card
+        style={{ top: scrolledDown ? -100 : 10 }}
+        className={`h-16 w-[95%] z-50 fixed flex items-center justify-between transition-all`}
+      >
+        <CardHeader>
+          <h1 className="font-bold text-2xl tracking-widest cursor-pointer">
+            IETE
+          </h1>
+        </CardHeader>
+
+        <CardContent className="gap-2 flex items-center justify-center">
+          <ThemeMenuButton />
+          <DropdownHamMenu />
+        </CardContent>
+      </Card>
+    </div>
+  );
 }

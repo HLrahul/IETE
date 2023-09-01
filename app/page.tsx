@@ -1,6 +1,8 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/HeroSection";
 import Intro from "@/components/IntroSection";
+import FeaturedEvents from "@/components/FeaturedEvents";
+import Footer from "@/components/Footer";
 
 export default function Home() {
     return (
@@ -10,6 +12,10 @@ export default function Home() {
             <Hero />
 
             <Intro />
+
+            <FeaturedEvents />
+
+            <Footer />
         </div>
     );
 }
