@@ -9,7 +9,6 @@ import ThemeMenuButton from "./ThemeButton";
 export default function Navbar() {
   const [scrolledDown, setScrolledDown] = useState(false);
   const [prevScrollY, setPrevScrollY] = useState(0);
-  const [prevScrollUp, setPrevScrollUp] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,26 +21,6 @@ export default function Navbar() {
       }
 
       setPrevScrollY(currentScrollY);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-
-      if (currentScrollY > prevScrollUp) {
-        setScrolledDown(false);
-      } else {
-        setScrolledDown(true);
-      }
-
-      setPrevScrollUp(currentScrollY);
     };
 
     window.addEventListener("scroll", handleScroll);
