@@ -1,10 +1,7 @@
 export default function Hero() {
     return (
-        <div className="h-screen w-full relative p-10 pt-[21vh]">
-            <h1 className="text-5xl">
-                This is the Hero Section
-            </h1>
-            <canvas id="ieteObject"></canvas>
+        <div className="h-screen w-full p-10 flex items-center justify-center">
+            <h1 className="text-4xl w-[40%] font-bold">Learning Today, Leading Tomorrow</h1>
         </div>
     );
 }
