@@ -1,12 +1,12 @@
 import { Button } from "./ui/button";
-import { Card, CardContent, CardTitle } from "./ui/card";
+import { Card, CardContent } from "./ui/card";
 
 export default function Intro() {
     return (
-      <div className="h-screen w-[100%] px-10 flex-col gap-10">
-        <div>
-          <h2 className="w-[50%] m-auto mb-2">Upcoming Event</h2>
-          <Card className="h-auto w-[50%] m-auto px-4 mb-[25vh] cursor-pointer hover:bg-primary/10">
+      <div className="h-auto w-[100%] px-10 flex-col gap-10">
+        <div className="sm:w-[80%] lg:w-[50%]-min m-auto mb-[15vh]">
+          <h2 className="m-auto mb-2">Upcoming Event</h2>
+          <Card className="h-auto m-auto cursor-pointer hover:bg-primary/10">
             <CardContent className="flex gap-10">
               <div className="flex-col gap-5">
                 <h1 className="text-3xl">30</h1>
@@ -21,17 +21,17 @@ export default function Intro() {
           </Card>
         </div>
 
-        <div className="h-[50%] w-[70%] m-auto flex-col items-center justify-center">
-          <h1 className="text-4xl font-bold text-justify">
+        <div className="h-[50%] w-full lg:w-[80%] m-auto mb-16 flex-col items-center justify-center">
+          <h1 className="lg:text-4xl text-xl font-bold text-justify">
             INNOVATION FOR THE PEOPLE AND BY THE PEOPLE IS THE REACTION OF OUR
             NEW INDIA
           </h1>
-          <h4 className="font-light flex justify-end">
+          <h4 className="font-light flex justify-end lg:text-sm text-[0.65rem]">
             - NARENDRA MODI, HON’BLE PRIME MINISTER OF INDIA.
           </h4>
         </div>
 
-        <div className="h-[50%] w-[70%] flex-col m-auto">
+        <div className="h-[50%] lg:w-[70%] w-[100%] flex-col m-auto">
           <p className="text-justify">
             Chennai Centre of IETE is committed to attain commanding heights and
             achieve the status of “Centre of Excellence” in Technical,
