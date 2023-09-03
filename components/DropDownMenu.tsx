@@ -18,7 +18,7 @@ export function DropdownHamMenu() {
     return (
         <DropdownMenu>
             <DropdownMenuTrigger asChild>
-                <Button variant="outline" className="flex flex-col gap-[3px]">
+                <Button variant="outline" className="flex-col gap-[3px]">
                     <span className="h-[2px] w-5 bg-current"></span>
                     <span className="h-[2px] w-5 bg-current"></span>
                     <span className="h-[2px] w-5 bg-current"></span>
