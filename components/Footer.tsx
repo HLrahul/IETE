@@ -9,7 +9,7 @@ export default function Footer() {
             <div className="h-auto w-[100%] md:w-[80%] m-auto p-10 flex-col md:flex gap-[2rem]">
                 <div className="flex-col w-[100%] md:w-[50%]">
                     <h1 className="text-4xl font-bold mb-0">IETE Chennai</h1>
-                    <p className="text-sm font-light text-primary/40">
+                    <p className="text-sm font-light text-primary/80">
                         IETE Chennai centre, No: 37, Tamil Nadu 600086 <br></br>
                         Conran Smith Road Entrance Peters Road, <br></br>
                         Gopalapuram, Chennai.
@@ -51,10 +51,10 @@ export default function Footer() {
                     </div>
 
                     <div className="mt-10 md:mt-5">
-                        <h1 className="font-bold text-bg">
+                        <h1 className="font-bold text-bg mb-2">
                             Subscribe to Newsletter
                         </h1>
-                        <div className="flex w-full md:w-[60%] items-center space-x-2">
+                        <div className="flex w-full md:w-[70%] items-center space-x-2">
                             <Input type="email" placeholder="Email" />
                             <Button type="submit" className="cursor-pointer">
                                 Subscribe

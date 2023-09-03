@@ -14,7 +14,7 @@ export default function Navbar() {
                     <div className="flex gap-2 items-center justify-center">
                         <PiTriangleBold
                             size={28}
-                            className="rotate-infinite p-0 m-0"
+                            className="p-0 m-0"
                         />
                         <h1 className="font-bold text-2xl tracking-widest cursor-pointer">
                             IETE

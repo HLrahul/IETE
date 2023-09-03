@@ -1,27 +1,34 @@
-"use client";
+'use client';
 
-import React, { useRef } from "react";
-import { Canvas } from "react-three-fiber";
-import * as THREE from "three";
+import { useRef } from 'react';
+import { Mesh } from 'three';
+import { Canvas, useFrame } from '@react-three/fiber';
 
-export default function Torus() {
-    const meshRef = useRef<THREE.Mesh>(null);
+function TorusGeometry() {
+    const MeshRef = useRef<Mesh>(null);
 
-    function animate() {
-        if (meshRef.current) {
-            const rotation = meshRef.current.rotation;
-            if (rotation) {
-                rotation.z -= 0.01;
-            }
+    useFrame(() => {
+        if (!MeshRef.current) {
+            return;    
         }
-    }
+
+        MeshRef.current.rotation.z -= 0.01;
+    });
 
     return (
-        <Canvas>
-            <mesh ref={meshRef}>
-                <torusGeometry args={[10, 3, 16, 100]} />
-                <meshBasicMaterial attach="material" color={0xffff00} />
-            </mesh>
-        </Canvas>
+      <>
+        <mesh ref={MeshRef}>
+          <torusGeometry args={[2, 0.25, 30, 64]} />
+          <meshStandardMaterial color="blue" />
+        </mesh>
+      </>
     );
+}
+
+export default function Torus() {
+    return (
+        <Canvas>
+            <TorusGeometry />
+        </Canvas>
+    )
 }
