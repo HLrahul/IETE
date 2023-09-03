@@ -3,7 +3,7 @@ import { EventDialog } from "./EventsDialog";
 export default function FeaturedEvents() {
     return (
       <div className="h-screen w-full p-10 flex items-center justify-center">
-        <div className="h-auto w-[100%] lg:w-[70%] m-auto grid gap-5 sm:grid-rows-4 lg:grid-rows-2 sm:grid-cols-1 lg:grid-cols-2">
+        <div className="h-[70%] w-[100%] md:w-[70%] m-auto grid gap-5 sm:grid-rows-4 md:grid-rows-2 sm:grid-cols-1 md:grid-cols-2">
           <EventDialog
             title="Professional Resume Writing"
             date="17-10-2020"

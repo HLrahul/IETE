@@ -13,7 +13,7 @@ export const EventDialog = (props: EventDialogProps) => {
     return (
         <Dialog>
             <DialogTrigger asChild>
-                <Card className="p-5 w-auto cursor-pointer hover:bg-primary/10">{ title }</Card>
+                <Card className="p-10 w-auto cursor-pointer hover:bg-primary/10 flex items-center justify-center">{ title }</Card>
             </DialogTrigger>
 
             <DialogContent className="sm:max-w-[425px]">

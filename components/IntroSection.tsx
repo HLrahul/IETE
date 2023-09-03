@@ -4,7 +4,7 @@ import { Card, CardContent } from "./ui/card";
 export default function Intro() {
     return (
       <div className="h-auto w-[100%] px-10 flex-col gap-10">
-        <div className="sm:w-[80%] lg:w-[50%]-min m-auto mb-[15vh]">
+        <div className="w-[80%] md:w-[50%] m-auto mb-[15vh]">
           <h2 className="m-auto mb-2">Upcoming Event</h2>
           <Card className="h-auto m-auto cursor-pointer hover:bg-primary/10">
             <CardContent className="flex gap-10">
@@ -21,17 +21,17 @@ export default function Intro() {
           </Card>
         </div>
 
-        <div className="h-[50%] w-full lg:w-[80%] m-auto mb-16 flex-col items-center justify-center">
-          <h1 className="lg:text-4xl text-xl font-bold text-justify">
+        <div className="h-[50%] w-full md:w-[80%] m-auto mb-16 flex-col items-center justify-center">
+          <h1 className="md:text-4xl text-xl font-bold text-justify">
             INNOVATION FOR THE PEOPLE AND BY THE PEOPLE IS THE REACTION OF OUR
             NEW INDIA
           </h1>
-          <h4 className="font-light flex justify-end lg:text-sm text-[0.65rem]">
+          <h4 className="font-light flex justify-end lg:text-sm md:text-[1rem]">
             - NARENDRA MODI, HON’BLE PRIME MINISTER OF INDIA.
           </h4>
         </div>
 
-        <div className="h-[50%] lg:w-[70%] w-[100%] flex-col m-auto">
+        <div className="h-[50%] md:w-[70%] w-[100%] flex-col m-auto">
           <p className="text-justify">
             Chennai Centre of IETE is committed to attain commanding heights and
             achieve the status of “Centre of Excellence” in Technical,
