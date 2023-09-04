@@ -47,8 +47,8 @@ export default function About () {
               training to the aspirants including corporate training.
             </p>
             <p className="text-justify mt-3 font-light">
-              The Centre assigns top priority to the basic need for ‘education
-              transformation’ in keeping pace with time, and aims at to develop
+              The Centre assigns top priority to the basic need for &apos;education
+              transformation&apos; in keeping pace with time, and aims at to develop
               the highest quality of manpower to cater to the needs &
               expectations of industry, R&D and educational institutions, with
               higher degree of employability for today and tomorrow.
