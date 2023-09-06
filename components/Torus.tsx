@@ -1,34 +1,36 @@
 "use client";
 
-import { useRef } from "react";
-import { Mesh } from "three";
-import { Canvas, useFrame } from "@react-three/fiber";
-import { OrbitControls } from "@react-three/drei";
+import { useRef } from 'react';
+import { Mesh } from 'three';
+import { Canvas, useFrame } from '@react-three/fiber';
+import { OrbitControls } from '@react-three/drei';
 
-function TorusGeometry() {
-    const meshRef = useRef<Mesh>(null);
+function TriangleMesh () {
+    return (
+        <mesh>
+           
+        </mesh>
+    )
+}
+
+function TorusMesh () {
+    const MeshRef = useRef<Mesh>(null);
 
     useFrame(() => {
-        if (!meshRef.current) {
-            return;
-        }
+        if(!MeshRef.current) return;
 
-        meshRef.current.rotation.z -= 0.01;
+        MeshRef.current.rotation.z -= 0.01;
     });
 
     return (
-        <>
-            <mesh ref={meshRef}>
-                <bufferGeometry attach="geometry">
-                    <torusGeometry args={[2, 0.25, 30, 0]} />
-                </bufferGeometry>
-                <meshStandardMaterial color="black" />
-            </mesh>
-        </>
-    );
+        <mesh ref={MeshRef}>
+            <torusGeometry args={[1.5, 0.15, 32, 64]} />
+            <meshStandardMaterial color="black" />
+        </mesh>
+    )
 }
 
-export default function Torus() {
+export default function Torus () {
     return (
         <Canvas>
             <OrbitControls
@@ -37,7 +39,7 @@ export default function Torus() {
                 enableZoom={false}
             />
             <ambientLight />
-            <TorusGeometry />
+            <TorusMesh />
         </Canvas>
-    );
+    )
 }
