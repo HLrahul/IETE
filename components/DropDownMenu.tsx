@@ -18,32 +18,33 @@ import {
 
 export function DropdownHamMenu() {
     return (
-      <DropdownMenu>
-        <DropdownMenuTrigger asChild>
-          <Button variant="outline" className="flex-col gap-[3px]">
-            <span className="h-[2px] w-5 bg-current"></span>
-            <span className="h-[2px] w-5 bg-current"></span>
-            <span className="h-[2px] w-5 bg-current"></span>
-          </Button>
-        </DropdownMenuTrigger>
-        <DropdownMenuContent className="w-56">
-          <Link href="/">
-            <DropdownMenuItem>Home</DropdownMenuItem>
-          </Link>
-          <Link href="/about">
-            <DropdownMenuItem>About</DropdownMenuItem>
-          </Link>
-          <DropdownMenuItem>Commitee Executive</DropdownMenuItem>
+        <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+                <Button variant="outline" className="flex-col gap-[3px]">
+                    <span className="h-[2px] w-5 bg-current"></span>
+                    <span className="h-[2px] w-5 bg-current"></span>
+                    <span className="h-[2px] w-5 bg-current"></span>
+                </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent className="w-56">
+                <Link href="/">
+                    <DropdownMenuItem>Home</DropdownMenuItem>
+                </Link>
+                <Link href="/about">
+                    <DropdownMenuItem>About</DropdownMenuItem>
+                </Link>
+                <Link href="/commity-members">
+                    <DropdownMenuItem>Commitee Executive</DropdownMenuItem>
+                </Link>
+                <DropdownMenuSeparator />
 
-          <DropdownMenuSeparator />
+                <DropdownMenuItem>Events</DropdownMenuItem>
+                <DropdownMenuItem>Membership</DropdownMenuItem>
 
-          <DropdownMenuItem>Events</DropdownMenuItem>
-          <DropdownMenuItem>Membership</DropdownMenuItem>
+                <DropdownMenuSeparator />
 
-          <DropdownMenuSeparator />
-
-          <DropdownMenuItem disabled>API</DropdownMenuItem>
-        </DropdownMenuContent>
-      </DropdownMenu>
+                <DropdownMenuItem disabled>API</DropdownMenuItem>
+            </DropdownMenuContent>
+        </DropdownMenu>
     );
 }

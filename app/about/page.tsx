@@ -1,4 +1,5 @@
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import React from "react";
 
 export default function About() {
@@ -65,6 +66,7 @@ export default function About() {
             </div>
 
             <div className="h-[50vh]"></div>
+            <Footer />
         </div>
     );
 }
