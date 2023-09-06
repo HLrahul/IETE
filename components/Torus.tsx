@@ -5,6 +5,14 @@ import { Mesh } from 'three';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 
+function TriangleMesh () {
+    return (
+        <mesh>
+           
+        </mesh>
+    )
+}
+
 function TorusMesh () {
     const MeshRef = useRef<Mesh>(null);
 
