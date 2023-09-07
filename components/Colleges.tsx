@@ -54,7 +54,7 @@ export default function Colleges() {
      <div
       draggable="true"
       id="collegePan"
-      className="h-auto mt-[3rem] w-[90%] m-auto p-10 flex items-center gap-5 overflow-y-scroll"
+      className="h-auto mb-[3rem] w-[90%] m-auto p-10 flex items-center gap-5 overflow-y-scroll"
     >
       {colleges.map((college) => (
         <CollegeCard
