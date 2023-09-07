@@ -45,7 +45,9 @@ export function DropdownHamMenu() {
           </Link>
           <DropdownMenuSeparator />
 
-          <DropdownMenuItem >Contact Us</DropdownMenuItem>
+          <Link href="/contact-us">
+            <DropdownMenuItem>Contact Us</DropdownMenuItem>
+          </Link>
         </DropdownMenuContent>
       </DropdownMenu>
     );
