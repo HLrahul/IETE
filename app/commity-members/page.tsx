@@ -143,7 +143,7 @@ export default function About() {
             <h1 className="w-[80%] m-auto mt-[20vh] text-3xl md:text-4xl font-bold">Commitee Executives</h1>
             <div className="mt-[1.5rem] mb-[20vh] h-auto w-[90%] md:w-[80%] m-auto grid gap-[2rem] grid-rows-13 md:grid-rows-auto grid-cols-1 md:grid-cols-3">
                 {members.map((member, index) => (
-                    <Card key={index} className="sm:w-[250px] w-[350px] sm:h-auto h-[400px]">
+                    <Card key={index} className="sm:w-[250px] md:w-[350px] sm:h-auto h-[400px]">
                         <CardHeader>
                             <CardTitle className="text-center font-bold sm:text-xl text-2xl tracking-wide mt-1">
                                 {member.designation}
