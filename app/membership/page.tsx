@@ -8,13 +8,14 @@ export default function MemberShip () {
         <Navbar />
 
         <div className="h-screen w-full flex items-center justify-center">
-          <Card className="h-[250px] w-[300px]">
+          <Card className="h-auto w-[300px]">
             <CardHeader>
               <CardTitle>Check again Later</CardTitle>
-            </CardHeader>
-            <CardDescription>
+            
+            <CardDescription className="">
               Thank you for your patience, check again later for more updates.
             </CardDescription>
+            </CardHeader>
           </Card>
         </div>
 

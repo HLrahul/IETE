@@ -11,10 +11,11 @@ export default function Events () {
           <Card className="h-[250px] w-[300px]">
             <CardHeader>
               <CardTitle>Check again Later</CardTitle>
-            </CardHeader>
+            
             <CardDescription>
               Thank you for your patience, check again later for more updates.
             </CardDescription>
+            </CardHeader>
           </Card>
         </div>
 
