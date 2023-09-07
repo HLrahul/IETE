@@ -95,6 +95,18 @@ body::-webkit-scrollbar-track {
   background-color: var(--scrollbar-track);
 }
 
+#collegePan::-webkit-scrollbar {
+  width: 1px;
+}
+
+#collegePan::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb);
+}
+
+#collegePan::-webkit-scrollbar-track {
+  background-color: var(--scrollbar-track);
+}
+
 
 @keyframes rotate {
   0% {

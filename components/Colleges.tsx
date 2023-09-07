@@ -1,5 +1,8 @@
-'use client';
+"use client";
 
+import "../app/globals.css";
+import { gsap } from "gsap";
+import { useEffect, useRef } from "react";
 import { CollegeCard } from "./CollegeCard";
 
 const colleges = [
@@ -26,13 +29,40 @@ const colleges = [
 ];
 
 export default function Colleges() {
-    return (
-        <div className="h-[50vh] w-auto p-10 flex items-center overflow-y-auto gap-5">
-            {
-                colleges.map((college) => (
-                    <CollegeCard avatarSrc={college.avatarSrc} collegeName={college.collegeName} />
-                ))
-            }
-        </div>
-    );
+
+  const collegesRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (collegesRef.current) {
+      const divWidth = collegesRef.current.offsetWidth;
+      const contentWidth = collegesRef.current.scrollWidth;
+      const duration = (contentWidth - divWidth) / 50;
+      gsap.to(collegesRef.current, {
+        scrollLeft: contentWidth - divWidth,
+        duration: duration,
+        ease: "linear",
+        repeat: -1,
+        yoyo: true,
+      });
+    }
+  }, []);
+
+  return (
+   <div className="h-auto mt-[3rem] mb-[5rem] w-full">
+    <h1 className="font-bold text-xl md:text-3xl">Colleges</h1>
+
+     <div
+      draggable="true"
+      id="collegePan"
+      className="h-auto mt-[3rem] w-[90%] m-auto p-10 flex items-center gap-5 overflow-y-scroll"
+    >
+      {colleges.map((college) => (
+        <CollegeCard
+          avatarSrc={college.avatarSrc}
+          collegeName={college.collegeName}
+        />
+      ))}
+    </div>
+   </div>
+  );
 }

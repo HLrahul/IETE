@@ -188,6 +188,7 @@ export default function About() {
                     </Card>
                 ))}
             </div>
+            
             <Footer />
         </div>
     );

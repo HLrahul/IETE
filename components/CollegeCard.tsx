@@ -13,13 +13,13 @@ export const CollegeCard = (props: CollegeCardProps) => {
     const { avatarSrc, collegeName } = props;
 
     return (
-        <Card className="p-5 h-[1rem] w-auto flex items-center justify-center gap-5">
+        <Card className="p-5 h-auto w-auto flex items-center justify-center gap-5">
             {/* <Avatar>
                 <AvatarImage className="object-center object-cover"></AvatarImage>
                 <AvatarFallback>I</AvatarFallback>
             </Avatar> */}
-
-            <p className="font-bold">{ collegeName }</p>
+    
+            <p className="font-bold whitespace-nowrap">{ collegeName }</p>
         </Card>
     )
 }
