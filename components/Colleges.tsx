@@ -58,6 +58,7 @@ export default function Colleges() {
     >
       {colleges.map((college) => (
         <CollegeCard
+          key={college.collegeName}
           avatarSrc={college.avatarSrc}
           collegeName={college.collegeName}
         />
