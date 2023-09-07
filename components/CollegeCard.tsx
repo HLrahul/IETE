@@ -5,6 +5,7 @@ import { Avatar } from "./ui/avatar";
 import { AvatarFallback, AvatarImage } from "@radix-ui/react-avatar";
 
 type CollegeCardProps = {
+    key: string;
     avatarSrc: string;
     collegeName: string;
 }
