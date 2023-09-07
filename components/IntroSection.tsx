@@ -27,7 +27,7 @@ export default function Intro() {
             </div>
 
             <div className="h-[50%] w-full md:w-[80%] m-auto mb-[4rem] md:mb-[8rem] flex-col items-center justify-center">
-                <h1 className="text-[4rem] font-bold mb-[3rem] w-full flex justify-center items-center">
+                <h1 className="text-[2.5rem] md:text-[4rem] font-bold mb-[3rem] w-full flex justify-center items-center">
                     INTRO
                 </h1>
 
@@ -43,7 +43,7 @@ export default function Intro() {
             <div className="h-[50%] md:w-[70%] w-[100%] flex-col m-auto">
                 <p className="text-justify md:text-1xl lg:text-2xl">
                     Chennai Centre of IETE is committed to attain commanding
-                    heights and achieve the status of “Centre of Excellence” in
+                    heights and achieve the status of <b>“Centre of Excellence”</b> in
                     Technical, Engineering & Management education by harnessing
                     the best practices in educational innovation and through its
                     concerted endeavors like quality teaching, industrial

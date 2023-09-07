@@ -141,21 +141,21 @@ export default function About() {
             <Navbar />
 
             <h1 className="w-[80%] m-auto mt-[20vh] text-3xl md:text-4xl font-bold">Commitee Executives</h1>
-            <div className="mt-[1.5rem] mb-[20vh] h-auto w-[90%] md:w-[80%] m-auto grid gap-[2rem] grid-rows-13 md:grid-rows-7 grid-cols-1 md:grid-cols-2">
+            <div className="mt-[1.5rem] mb-[20vh] h-auto w-[90%] md:w-[80%] m-auto grid gap-[2rem] grid-rows-13 md:grid-rows-auto grid-cols-1 md:grid-cols-3">
                 {members.map((member, index) => (
-                    <Card key={index} className="sm:w-[300px] w-[350px] sm:h-[370px] h-[400px]">
+                    <Card key={index} className="sm:w-[300px] w-[300px] sm:h-[370px] h-[400px]">
                         <CardHeader>
-                            <CardTitle className="text-center font-bold text-2xl tracking-wide mt-2">
+                            <CardTitle className="text-center font-bold sm:text-xl text-2xl tracking-wide mt-1">
                                 {member.designation}
                             </CardTitle>
                             <CardContent>
                                 <div className="flex justify-center items-center">
-                                    <Avatar className="h-[100px] w-[100px]">
+                                    <Avatar className="h-[5rem] w-[5rem]">
                                         <AvatarImage src={member.src} />
                                         <AvatarFallback>CN</AvatarFallback>
                                     </Avatar>
                                 </div>
-                                <h5 className="text-center mt-5 font-semibold text-lg">
+                                <h5 className="text-center mt-4 font-semibold text-lg">
                                     {member.fullname}
                                 </h5>
                                 <CardDescription className="text-center mt-2">
@@ -169,7 +169,7 @@ export default function About() {
                                     <Image
                                         width={25}
                                         height={25}
-                                        src="https://img.icons8.com/material-outlined/24/{bg-current}/mail.png"
+                                        src="https://img.icons8.com/material-outlined/24/{bg-primary/100}/mail.png"
                                         alt="mail"
                                         style={{ marginRight: "5px" }}
                                     />

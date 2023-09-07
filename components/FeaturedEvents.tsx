@@ -20,7 +20,7 @@ export default function FeaturedEvents() {
             ref={containerRef}
             className="h-auto md:h-[120vh] w-[100%] m-auto p-10 md:flex flex-col justify-center items-center"
         >
-            <h1 className="flex items-center justify-center text-[4rem] font-bold w-full m-auto mt-[4rem] mb-[1rem]">
+            <h1 className="flex items-center justify-center text-[2.5rem] md:text-[4rem] font-bold w-full m-auto mt-[4rem] mb-[1rem]">
                 RECENT EVENTS
             </h1>
 
