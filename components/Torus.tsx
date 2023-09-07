@@ -1,9 +1,10 @@
 "use client";
 
-import { useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { BufferAttribute, BufferGeometry, Mesh } from 'three';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
+import { useTheme } from 'next-themes';
 
 function HollowTriangleGeometry() {
   const geometry = new BufferGeometry();
@@ -40,16 +41,39 @@ function TorusMesh () {
         MeshRef.current.rotation.y -= 0.01;
     });
 
+    const [color, setColor] = useState<string>("black");
+
+    const {theme} = useTheme();
+
+    useEffect(() => {
+        if(theme === "dark") setColor("#fff");
+        else setColor("black");
+    }, [theme]);
+
+useEffect(() => {
+  const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+  const listener = (event: MediaQueryListEvent | MediaQueryList) => {
+    setColor(event.matches ? "#fff" : "black");
+  };
+  listener(mediaQuery);
+  mediaQuery.addEventListener("change", listener);
+  return () => mediaQuery.removeEventListener("change", listener);
+}, []);
+    
+
     return (
         <mesh ref={MeshRef}>
             <torusGeometry args={[1.5, 0.15, 32, 64]} />
-            <meshStandardMaterial color="black" />
+            <meshStandardMaterial color={color} />
         </mesh>
     )
 }
 
 export default function Torus () {
+
     return (
+
+
         <Canvas>
             <OrbitControls
                 enableRotate={true}
@@ -60,5 +84,6 @@ export default function Torus () {
             {/*<HollowTriangleGeometry />*/}
             <TorusMesh />
         </Canvas>
+
     )
 }
