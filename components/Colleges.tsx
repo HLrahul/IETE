@@ -49,7 +49,7 @@ export default function Colleges() {
 
   return (
    <div className="h-auto mt-[3rem] mb-[5rem] w-full flex-col items-center justify-center">
-    <h1 className="font-bold text-xl md:text-3xl">Colleges</h1>
+    <h1 className="font-bold text-xl md:text-3xl w-[90%] m-auto p-5">Colleges</h1>
 
      <div
       draggable="true"
