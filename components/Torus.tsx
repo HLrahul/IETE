@@ -36,7 +36,8 @@ function TorusMesh () {
     useFrame(() => {
         if(!MeshRef.current) return;
 
-        MeshRef.current.rotation.z -= 0.01;
+        MeshRef.current.rotation.x -= 0.01;
+        MeshRef.current.rotation.y -= 0.01;
     });
 
     return (
@@ -56,7 +57,7 @@ export default function Torus () {
                 enableZoom={false}
             />
             <ambientLight />
-            <HollowTriangleGeometry />
+            {/*<HollowTriangleGeometry />*/}
             <TorusMesh />
         </Canvas>
     )
